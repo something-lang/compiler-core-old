@@ -1,11 +1,9 @@
 #!/bin/bash
-
-echo "
-master
+echo "master
 develop
 feature/
-bigfix/
+bugfix/
+release/
 hotfix/
 support/
-v.
-"|git flow init
+v."|git flow init
