@@ -1,0 +1,35 @@
+BasedOnStyle: LLVM
+
+ColumnLimit: 0
+IndentWidth: '3'
+TabWidth: '3'
+AccessModifierOffset: '-2'
+ConstructorInitializerIndentWidth: '3'
+ContinuationIndentWidth: '3'
+ObjCBlockIndentWidth: '3'
+UseTab: ForContinuationAndIndentation
+IndentCaseLabels: 'true'
+IndentPPDirectives: BeforeHash
+NamespaceIndentation: All
+#SpacesInLineCommentPrefix: 1 # clang 13 only
+#SortIncludes # clang 13 only, setting needs to be figured out
+Cpp11BracedListStyle: false
+
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+# https://reviews.llvm.org/D33029 add this when it gets implemented
+BreakBeforeBraces: Attach
+BreakAfterJavaFieldAnnotations: false
+BreakBeforeBinaryOperators: None
+
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+#AllowShortEnumsOnASingleLine: true # this breaks things?
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Empty
+AllowShortLoopsOnASingleLine: false
+
+AlignAfterOpenBracket: DontAlign
+FixNamespaceComments: false
