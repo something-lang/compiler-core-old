@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
 	// open code file
 	FILE* codeFile = fopen(argv[1], "r");
 	if (!codeFile) {
-		fprintf(stderr, "No file specified");
+		fprintf(stderr, "No file specified\n");
 		exit(1);
 	}
 	// get code file length
