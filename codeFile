@@ -1,10 +1,24 @@
 // hmm yes code
 
+
 3
 
 /**
  *
  *
+ * add(...args)
+ * subtract(...args)
+ * multiply(...args)
+ * divide(...args)
+ * exp(a, b)
+ * mod(a, b)
+ *
+ * floor()
+ * min(...args)	(Int ...a) (...Int a)
+ * max(...args)
+
+ *
+ * sign(x) = abs(x)/x
  * add(...args) // +
  * subtract(...args) // -
  * multiply(...args) // *
@@ -64,6 +78,14 @@
  * acosh()
  * atanh()
  *
+ * abs()
+ * cbrt()
+ * ceil()
+ * clz32()
+ * expm1()
+ * fround()
+ * hypot()
+ * imul()
  * // check if these are needed
  * cbrt()
  * clz32()
@@ -74,6 +96,13 @@
  * log1p()
  * log2()
  * log10()
+ *
+ * pow()
+ * random()
+ * round()
+ * sign()
+ * sqrt()
+ * trunc()
  * exp() // is this needed?
  * random()
  * 
