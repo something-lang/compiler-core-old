@@ -1,6 +1,7 @@
 // hmm yes code
 
 
+3
 
 /**
  *
@@ -18,6 +19,32 @@
 
  *
  * sign(x) = abs(x)/x
+ * add(...args) // +
+ * subtract(...args) // -
+ * multiply(...args) // *
+ * divide(...args) // /
+ * pow(a, b) // **
+ * mod(a, b) % (slightly complex this needs more functions for different things)
+ * 
+ * uitnX
+ * 
+ * int  = uint 32
+ * boolean = uint1
+ * 
+ * 
+ * comp(a, b) => (a>b)-(a<b) // <=>
+ * sign(a) => comp(a, 0)
+ * 
+ * 
+ * 
+ * 
+ * round(a)
+ * floor(a)
+ * ceil(a)
+ * trunc(a)
+ * min(...args)
+ * max(...args)
+ * abs()
  *
  * const double E
  * const double LN2
@@ -59,6 +86,12 @@
  * fround()
  * hypot()
  * imul()
+ * // check if these are needed
+ * cbrt()
+ * clz32()
+ * expm1()
+ * fround() // needs a better name and params
+ * hypot()
  * log()
  * log1p()
  * log2()
@@ -70,4 +103,9 @@
  * sign()
  * sqrt()
  * trunc()
+ * exp() // is this needed?
+ * random()
+ * 
+ * sign()
+ * sqrt()
  */
