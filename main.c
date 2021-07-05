@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
 	FILE* codeFile = fopen(argv[1], "r");
 	if (!codeFile) {
 		fprintf(stderr, "No file specified");
-		return 1;
+		exit(1);
 	}
 	// get code file length
 	fseek(codeFile, 0, SEEK_END);
