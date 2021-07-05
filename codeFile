@@ -1,1 +1,73 @@
 // hmm yes code
+
+
+
+/**
+ *
+ *
+ * add(...args)
+ * subtract(...args)
+ * multiply(...args)
+ * divide(...args)
+ * exp(a, b)
+ * mod(a, b)
+ *
+ * floor()
+ * min(...args)	(Int ...a) (...Int a)
+ * max(...args)
+
+ *
+ * sign(x) = abs(x)/x
+ *
+ * const double E
+ * const double LN2
+ * const double LN10
+ * const double LOG2E
+ * const double LOG10E
+ * const double PI
+ * const double SQRT1_2
+ * const double SQRT2
+ *
+ * const long double El
+ * const long double LN2l
+ * const long double LN10l
+ * const long double LOG2El
+ * const long double LOG10El
+ * const long double PIl
+ * const long double SQRT1_2l
+ * const long double SQRT2l
+ *
+ * sin()
+ * cos()
+ * tan()
+ * sinh()
+ * cosh()
+ * tanh()
+ * asin()
+ * acos()
+ * atan()
+ * atan2()
+ * asinh()
+ * acosh()
+ * atanh()
+ *
+ * abs()
+ * cbrt()
+ * ceil()
+ * clz32()
+ * expm1()
+ * fround()
+ * hypot()
+ * imul()
+ * log()
+ * log1p()
+ * log2()
+ * log10()
+ *
+ * pow()
+ * random()
+ * round()
+ * sign()
+ * sqrt()
+ * trunc()
+ */
