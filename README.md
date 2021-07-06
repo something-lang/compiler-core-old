@@ -3,6 +3,5 @@
 # Plans
 
 - Packages (.dep,.pkg.tar.zst)
-- - Syntax Highlighting
-- - Docs Generator
--
+	- Syntax Highlighting
+	- Docs Generator
