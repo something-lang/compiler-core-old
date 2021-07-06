@@ -6,7 +6,7 @@
 			"command": "/usr/bin/gcc",
 			"args": [
 				"-g",
-				"${workspaceRoot}/main.c",
+				"${workspaceRoot}/src/smain.c",
 				"-o",
 				"${workspaceRoot}/main"
 			],
