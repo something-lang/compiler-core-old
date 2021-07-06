@@ -163,7 +163,7 @@ bool lexer_finished() {
 	return lexer.i == strlen(lexer.src);
 }
 
-void lex_next_token() {
+void get_next_token() {
 	if (lexer_finished()) {
 		printf("The lexer has ran out of characters\n");
 		exit(1);
@@ -208,6 +208,7 @@ void lex_next_token() {
 	} while (lexer.running);
 
 	lexer.tokencache = "";
+	return token;
 }
 
 // code format right now is just number values and functions like "add(3,5,multiply(5,8,3,2,1,5,76,6,)) // yes code"
@@ -219,8 +220,10 @@ unsigned int length - length of the text
 
 int main(int argc, char* argv[]) {
 	init_lexer("h(w){int a=1+1;}");
+
+	//test untill end of lexer development
 	while (!lexer_finished())
-		lex_next_token();
+		get_next_token();
 
 	// open code file
 	/*if (argv[1][0] == 0) {
@@ -234,11 +237,11 @@ int main(int argc, char* argv[]) {
 		fprintf(stderr, "Invalid input file");
 		return 1;
 	}
-	FILE* elfFile = fopen(argv[1], "wb");
+	/*FILE* elfFile = fopen(argv[1], "wb");
 	if (!elfFile) {
 		fprintf(stderr, "No output file specified");
 		return 1;
-	}
+	}*/
 
 	// get code file length
 	fseek(codeFile, 0, SEEK_END);
@@ -246,12 +249,12 @@ int main(int argc, char* argv[]) {
 	fseek(codeFile, 0, SEEK_SET);
 	// store code into string and close file
 	char* codeText = malloc(codeFileLength);
-	fread(codeText, codeFileLength, 1, codeFile);
+	fread(codeText, 1, codeFileLength, codeFile);
 	fclose(codeFile);
 
 	puts(codeText);
 
-	fclose(elfFile);*/
+	fclose(elfFile);
 
 	return 0;
 }

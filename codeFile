@@ -26,12 +26,6 @@
  * pow(a, b) // **
  * mod(a, b) % (slightly complex this needs more functions for different things)
  * 
- * uitnX
- * 
- * int  = uint 32
- * boolean = uint1
- * 
- * 
  * comp(a, b) => (a>b)-(a<b) // <=>
  * sign(a) => comp(a, 0)
  * 
