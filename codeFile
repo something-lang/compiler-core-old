@@ -6,17 +6,46 @@
 /**
  *
  *
- * add(...args)
- * subtract(...args)
- * multiply(...args)
- * divide(...args)
- * exp(a, b)
- * mod(a, b)
- *
+ * add(...args) // a+b+c+d..
+ * subtract(a, b) // a-b
+ * multiply(...args) // a*b*c*d...
+ * divide(a, b) // a/b
+ * exp(a, b) // a**b
+ * mod(a, b) // a%b
+ * 
+ * increment(a*) // ++a
+ * decrement(a*) // --a
+ * postIncrement(a*) // a++
+ * postDecrement(a*) // a--
+ * 
+ * assign(a*, b) // a = b
+ * 
+ * equal(a, b) // a == b
+ * notEqual(a, b) // a != b // TODO: should this be a function?
+ * greaterThan(a, b) // a > b
+ * lessThan(a, b) // a < b
+ * greaterOrEqual(a, b) // a >= b // TODO: should be worded better
+ * lessOrEqual(a, b) // a <= b // TODO: should be worded better
+ * comp(a, b) => (a>b)-(a<b) // <=>
+ * 
+ * logicalAnd() // &&
+ * logicalOr() // ||
+ * logialNot() // !
+ * 
+ * bitwiseAnd() // &
+ * bitwiseOr() // |
+ * bitwiseNot() // ~
+ * bitwiseXor() // ^
+ * leftShift() // <<
+ * rightShift() // >> // TODO: how should these be named, and which operator should do which action?
+ * rightShift() // >>>
+ * // TODO: check if any other things exist that are easy low level
+ * 
+ * 
+ * 
  * floor()
  * min(...args)	(Int ...a) (...Int a)
  * max(...args)
-
  *
  * sign(x) = abs(x)/x
  * add(...args) // +
@@ -26,7 +55,7 @@
  * pow(a, b) // **
  * mod(a, b) % (slightly complex this needs more functions for different things)
  * 
- * comp(a, b) => (a>b)-(a<b) // <=>
+ * 
  * sign(a) => comp(a, 0)
  * 
  * 
