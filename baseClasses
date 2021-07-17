@@ -1,0 +1,36 @@
+class Type {
+	operator [] () { // TODO: consider better operator overload system
+		//ArrayPointer<this>;
+	}
+	operator * () {
+		//Pointer<this>; // TODO: figure out how to set types
+	}
+};
+class Void {};
+
+class Bool {};
+
+class Size extends IntegerType</*TODO: architecture precompiler vars*/> {};
+class Char {};
+
+class IntegerType<
+	Bool signed,
+	BigInteger byteMin,
+	BigInteger byteMax, // TODO: set no max size
+> {};
+class FloatType<
+	BigInteger byteMin,
+	BigInteger byteMax,
+> {};
+
+class Pointer<Type type> extends IntegerType</* TODO */> {};
+class ArrayPointer<
+	Type type,
+	Size size,
+> extends Pointer<type> {};
+
+
+
+class BigInteger<Bool signed> {}; // stores ANY integer value
+
+class BigDecimal<Bool signed = true> {}; // stores ANY number value
