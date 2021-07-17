@@ -221,7 +221,7 @@ unsigned int length - length of the text
 int main(int argc, char* argv[]) {
 	init_lexer("h(w){int a=1+1;}");
 
-	//test untill end of lexer development
+	// test until end of lexer development
 	while (!lexer_finished())
 		get_next_token();
 
@@ -244,7 +244,7 @@ int main(int argc, char* argv[]) {
 	}*/
 
 	// get code file length
-	fseek(codeFile, 0, SEEK_END);
+	/*fseek(codeFile, 0, SEEK_END);
 	long codeFileLength = ftell(codeFile);
 	fseek(codeFile, 0, SEEK_SET);
 	// store code into string and close file
@@ -254,7 +254,7 @@ int main(int argc, char* argv[]) {
 
 	puts(codeText);
 
-	fclose(elfFile);
+	fclose(elfFile);*/
 
 	return 0;
 }
