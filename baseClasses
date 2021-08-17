@@ -1,36 +1,55 @@
+#const ADDRESS_SPACE_SIZE; // architecture dependent
+#const DEFAULT_INT_SIZE; // architecture dependent
+#const DEFAULT_FLOAT_SIZE; // architecture dependent
+
 class Type {
-	operator [] () { // TODO: consider better operator overload system
+	operator [] (Size size) { // TODO: consider better operator overload system
+		//ArrayPointer<this, size>;
+	}
+	operator [] () {
 		//ArrayPointer<this>;
 	}
 	operator * () {
 		//Pointer<this>; // TODO: figure out how to set types
 	}
 };
-class Void {};
+class Void { // everything extends Void, so any changes to void applies to all types
+	operator & () {
+			//Pointer<typeof(this)> = /* depends */;
+	}
+};
 
 class Bool {};
 
-class Size extends IntegerType</*TODO: architecture precompiler vars*/> {};
+class Size extends Int<false, ADDRESS_SPACE_SIZE> {};
 class Char {};
 
-class IntegerType<
-	Bool signed,
-	BigInteger byteMin,
-	BigInteger byteMax, // TODO: set no max size
+class Int<
+	Bool signed = true,
+	BigInteger<false> byteMin = DEFAULT_INT_SIZE,
+	BigInteger<false> byteMax = 0, // 0 means no max size
 > {};
-class FloatType<
-	BigInteger byteMin,
-	BigInteger byteMax,
+class Float<
+	BigInteger<false> byteMin = DEFAULT_FLOAT_SIZE,
+	BigInteger<false> byteMax = 0, // 0 means no max size
 > {};
 
-class Pointer<Type type> extends IntegerType</* TODO */> {};
+class Pointer<Type type> extends Int<false, ADDRESS_SPACE_SIZE> {
+	operator * () {
+		//type// this needs some way to contain the location
+	}
+};
 class ArrayPointer<
 	Type type,
-	Size size,
+	Size size = /* implicit based on definition */,
 > extends Pointer<type> {};
 
 
 
-class BigInteger<Bool signed> {}; // stores ANY integer value
+class BigInteger<Bool signed = true> {}; // stores ANY integer value
 
-class BigDecimal<Bool signed = true> {}; // stores ANY number value
+class BigFraction<Bool signed = true> {}; // stores ANY rational number value (one way of doing this is storing divisor and dividend BigIntegers)
+
+class BigAlgebraic<> {}; // stores ANY algebraic number value (roots) // TODO: should this be here? how would it be done?
+
+class BigComputable<> {}; // stores ANY computable number value // TODO: should this be here? how would it be done?

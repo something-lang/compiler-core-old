@@ -44,7 +44,7 @@ char* generateElfHeader(size_t* elfHeaderSize) {
 		memcpy(elfHeader + 0x20, (*(uint32_t*)tmp = 0x00000000, tmp), 4); // TODO: section header
 	}
 
-	memcpy(elfHeader + offset + 0x24, (*(uint16_t*)tmp = 0x0000, tmp), 2); // TODO: flags
+	memcpy(elfHeader + offset + 0x24, (*(uint16_t*)tmp = 0x0000, tmp), 2); // flags (unused on x86_64) TODO: other architectures
 
 	memcpy(elfHeader + offset + 0x28, (uint16_t*)elfHeaderSize, 2); // elf header size
 	memcpy(elfHeader + offset + 0x2a, (uint16_t*)tmp, 2); // TODO: program header entry size
